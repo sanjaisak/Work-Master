@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-title>Add Task</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img src="../../assets/img/3699675.svg" alt="" srcset="" />
+        <ion-card-header>
+            <ion-card-subtitle>User Can Add Task</ion-card-subtitle>
+            <ion-card-title>Add Task</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <br />
+            <ion-item>
+                <ion-label position="stacked">Date</ion-label>
+                <ion-input type="date"></ion-input>
+            </ion-item>
+            <br />
+
+            <ion-item>
+                <ion-label position="stacked">Label</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <br />
+            <ion-item>
+                <ion-label position="stacked">Task Type</ion-label>
+                <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+                    <ion-select-option value="bacon">Bug</ion-select-option>
+                    <ion-select-option value="olives">Feature</ion-select-option>
+                    <ion-select-option value="Task">Task</ion-select-option>
+                    <ion-select-option value="Learning">Learning</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <br />
+
+            <ion-item>
+                <ion-label position="stacked">Task Name</ion-label>
+                <ion-input></ion-input>
+            </ion-item>
+            <br />
+
+            <ion-item>
+                <ion-label position="stacked">Description</ion-label>
+                <ion-textarea rows="6" cols="20"></ion-textarea>
+            </ion-item>
+            <br />
+            <ion-button expand="block">Add Task
+                <ion-ripple-effect></ion-ripple-effect>
+            </ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header>
+        <ion-toolbar color="tertiary">
+            <ion-title>WorkMaster</ion-title>
+        </ion-toolbar>
+    </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-content>
+        <ion-card>
+            <img src="../../assets/img/3699671.svg" alt="" srcset="" />
+            <ion-card-header>
+                <ion-card-title>Welcome To Work Master</ion-card-title>
+                <ion-card-subtitle>log your work any time any were</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+                <p>
+                    You log your daily work and get a report or an analytics to see how effective your
+                </p>
+                <br />
+                <ion-button color="secondary" shape="round" expand="block" routerLink="/add-task">Add Work</ion-button>
+                <ion-button color="success" shape="round" expand="block" routerLink="/view-work">My Work</ion-button>
+                <ion-button color="danger" shape="round" expand="block">Analytics</ion-button>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
 </ion-content>
