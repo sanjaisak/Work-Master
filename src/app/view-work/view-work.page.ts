@@ -21,9 +21,7 @@ export class ViewWorkPage implements OnInit {
   }
   ngOnInit() {
     this.getData();
-        // setInterval(() => {
-        //     this.getData();
-        // }, 10000);
+
   }
   /*
   https://work-master-pro.herokuapp.com/*/
