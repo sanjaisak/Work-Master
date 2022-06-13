@@ -1,5 +1,7 @@
 {
   "name": "workMaster",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

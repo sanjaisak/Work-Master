@@ -14,42 +14,53 @@
 
         <ion-card-content>
             <br />
+            <form [formGroup]="addTaskForm"  (ngSubmit)="addTask()">
             <ion-item>
                 <ion-label position="stacked">Date</ion-label>
-                <ion-input type="date"></ion-input>
+                <ion-input type="date" formControlName="date" ></ion-input>
             </ion-item>
             <br />
 
             <ion-item>
                 <ion-label position="stacked">Label</ion-label>
-                <ion-input></ion-input>
+                <ion-input type="text"  formControlName="label" ></ion-input>
             </ion-item>
             <br />
             <ion-item>
                 <ion-label position="stacked">Task Type</ion-label>
-                <ion-select multiple="true" cancelText="Nah" okText="Okay!">
-                    <ion-select-option value="bacon">Bug</ion-select-option>
-                    <ion-select-option value="olives">Feature</ion-select-option>
+                <ion-select #task cancelText="Nah" okText="Okay!" formControlName="taskType"> 
+                    <ion-select-option value="Bug">Bug</ion-select-option>
+                    <ion-select-option value="Feature">Feature</ion-select-option>
                     <ion-select-option value="Task">Task</ion-select-option>
                     <ion-select-option value="Learning">Learning</ion-select-option>
                 </ion-select>
             </ion-item>
             <br />
-
+            <ion-item *ngIf="task.value !== null && task.value !== 'Learning'">
+                <ion-label position="stacked">{{task.value}} Number</ion-label>
+                <ion-input type="text"  formControlName="taskNumber" ></ion-input>
+            </ion-item>
+            <br>
             <ion-item>
-                <ion-label position="stacked">Task Name</ion-label>
-                <ion-input></ion-input>
+                <ion-label position="stacked" >Time Taken</ion-label>
+                <ion-input type="text"  formControlName="workLog"></ion-input>
+            </ion-item>
+            <br>
+            <ion-item>
+                <ion-label position="stacked" >Task Name</ion-label>
+                <ion-input type="text"  formControlName="taskName"></ion-input>
             </ion-item>
             <br />
-
+           
             <ion-item>
-                <ion-label position="stacked">Description</ion-label>
-                <ion-textarea rows="6" cols="20"></ion-textarea>
+                <ion-label position="stacked" >Task Description</ion-label>
+                <ion-textarea rows="6" cols="20" formControlName="taskDescription" ></ion-textarea>
             </ion-item>
             <br />
-            <ion-button expand="block">Add Task
+            <ion-button expand="block" type="submit">Add Task
                 <ion-ripple-effect></ion-ripple-effect>
             </ion-button>
+        </form>
         </ion-card-content>
     </ion-card>
 </ion-content>

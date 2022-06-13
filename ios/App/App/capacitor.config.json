@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "workMaster",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
