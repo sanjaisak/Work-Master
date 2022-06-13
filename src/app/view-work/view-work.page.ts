@@ -21,13 +21,12 @@ export class ViewWorkPage implements OnInit {
   }
   ngOnInit() {
     this.getData();
-        // setInterval(() => {
-        //     this.getData();
-        // }, 10000);
-  }
 
+  }
+  /*
+  https://work-master-pro.herokuapp.com/*/
   async getData(){
-    await this.http.get<any>('https://work-master-pro.herokuapp.com/getTask').subscribe(data => {
+    await this.http.get<any>('https://work-master20.herokuapp.com/getTask').subscribe(data => {
       this.taskInfo = data;
       this.taskInfo.sort((a,b)=> {
         const d1 = Date.parse(a.date);

@@ -23,10 +23,20 @@ constructor(private http: HttpClient,public toastController: ToastController) { 
 
   ngOnInit() {
   }
-  async presentToast() {
+  async successToast() {
     this.addTaskForm.reset();
     const toast = await this.toastController.create({
       message: 'Your task is saved successfully.',
+      duration: 2000,
+      color: 'success',
+    });
+    toast.present();
+  }
+
+  async failedToast() {
+    this.addTaskForm.reset();
+    const toast = await this.toastController.create({
+      message: 'Failed to save the task',
       duration: 2000,
       color: 'success',
     });
@@ -38,8 +48,16 @@ public addTask(){
 if(this.addTaskForm.value.taskName === 'Learning'){
   this.addTaskForm.value.taskNumber = undefined;
 }
-this.http.post<any>('https://work-master-pro.herokuapp.com/addtask', this.addTaskForm.value).subscribe(data => {
-      this.presentToast();
+// this.http.post<any>('https://work-master-pro.herokuapp.com/addtask', this.addTaskForm.value).subscribe(data => {
+//       this.presentToast();
+//     });
+
+    this.http.post<any>('https://work-master20.herokuapp.com/addtask', this.addTaskForm.value).subscribe(data => {
+      if(data){
+      this.successToast();}
+      else{
+        this.failedToast();
+      }
     });
 }
 }
