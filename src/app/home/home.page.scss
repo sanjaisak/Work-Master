@@ -1,3 +1,14 @@
 ion-card {
     background-color: rgb(240, 225, 214);
 }
+
+ion-content {
+    --ion-background-color: rgba(255, 255, 255, 0.966);
+}
+
+.flexContainer {
+    display: flex;
+    height: 95%;
+    align-items: center;
+    justify-content: center;
+}
